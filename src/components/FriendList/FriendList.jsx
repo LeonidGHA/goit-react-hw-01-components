@@ -3,11 +3,18 @@ import css from './FriendList.module.css';
 import PropTypes from 'prop-types';
 
 function FriendList({ friends }) {
-  const friendEl = friends.map(({ id, ...prop }) => (
-    <FriendListItem key={id} {...prop} />
-  ));
-  return <ul className={css.friendList}>{friendEl}</ul>;
+  // const friendEl = friends.map(({ id, ...prop }) => (
+  //   <FriendListItem key={id} {...prop} />
+  // ));
+  return (
+    <ul className={css.friendList}>
+      {friends.map(({ id, ...prop }) => (
+        <FriendListItem key={id} {...prop} />
+      ))}
+    </ul>
+  );
 }
+
 FriendList.propTypes = {
   friends: PropTypes.arrayOf(
     PropTypes.shape({

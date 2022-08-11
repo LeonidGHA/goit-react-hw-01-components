@@ -3,6 +3,8 @@ import Statistics from './Statistics/Statistics';
 import FriendList from './FriendList/FriendList';
 import TransactionHistory from './TransactionHistory/TransactionHistory';
 
+import css from './App.module.css';
+
 import user from '../Data/user.json';
 import data from '../Data/data.json';
 import friends from '../Data/friends.json';
@@ -10,16 +12,7 @@ import transactions from '../Data/transactions.json';
 
 export const App = () => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
+    <div className={css.rootStylization}>
       <Profile user={user} />
       <Statistics title="Upload stats" stats={data} />
       {/* <Statistics stats={data} /> */}
