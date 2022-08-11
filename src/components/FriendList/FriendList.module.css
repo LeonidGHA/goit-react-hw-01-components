@@ -1,0 +1,14 @@
+.online {
+  border-radius: 2px;
+  background-color: green;
+  border-radius: 50%;
+}
+.offline {
+  border-radius: 2px solid;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.friendList {
+  display: flex;
+}
